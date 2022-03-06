@@ -173,8 +173,8 @@ class UnitedStates(HolidayBase):
         # Lincoln's Birthday
         name = "Lincoln's Birthday"
         if (
-            self.subdiv in ("CT", "IL", "IA", "NJ", "NY") and year >= 1971
-        ) or (self.subdiv == "CA" and 1971 <= year <= 2009):
+            self.subdiv in ("CA", "CT", "IL", "IA", "NJ", "NY") and year >= 1971
+        ):
             self[date(year, FEB, 12)] = name
             if self.observed and date(year, FEB, 12).weekday() == SAT:
                 self[date(year, FEB, 11)] = name + " (Observed)"
